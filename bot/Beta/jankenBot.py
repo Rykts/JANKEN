@@ -13,11 +13,8 @@ count = 0
 your_hand_now = 0
 wb = Workbook()
 ws = wb.active
-df = pd.read_csv('C:/Users/rykts/Documents/JANKEN/bot/StreamBot_Beta/hand.csv')
+df = pd.read_csv('C:/Users/rykts/Documents/JANKEN/bot/Beta/hand.csv')
 
-with open("C:/Users/rykts/Documents/JANKEN/bot/StreamBot_Beta/hand.csv", 'a', newline='')as f:
-    writer = csv.writer(f)
-    f.truncate(0) #現在のファイルサイズを０にする
 
 def randomJanken():
     for _ in range(3):
@@ -46,7 +43,7 @@ def randomJanken():
         hands[2] = hands[3]
         hands[3] = your_hand_now
         # csvファイルに書き込み
-        with open('C:/Users/rykts/Documents/JANKEN/bot/StreamBot_Beta/hand.csv', 'a', newline='\n') as csvFile:
+        with open('C:/Users/rykts/Documents/JANKEN/bot/Beta/hand.csv', 'a', newline='\n') as csvFile:
             writer = csv.writer(csvFile)
             writer.writerow(hands)
             # print("「{}」を書き込みました".format(hands))
@@ -104,7 +101,7 @@ for i in range(87):
             # print("「{}」を書き込みました".format(hands))
         csvFile.close()
 
-    with open('C:/Users/rykts/Documents/JANKEN/bot/StreamBot_Beta/hand.csv', 'a', newline='\n') as csvFile:
+    with open('C:/Users/rykts/Documents/JANKEN/bot/Beta/hand.csv', 'a', newline='\n') as csvFile:
         writer = csv.writer(csvFile)
         writer.writerow(hands)
         # print("「{}」を書き込みました".format(hands))
