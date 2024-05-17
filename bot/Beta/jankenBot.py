@@ -25,13 +25,13 @@ def randomJanken():
         hands[3] = your_hand_now
         if your_hand_now == random.randint(1, 3):
 
-            with open('C:/Users/rykts/Documents/Codes/Projects/janken/result.csv', 'a', newline='\n') as csvFile:
+            with open('C:/Users/rykts/Documents/JANKEN/Bot/Beta/result.csv', 'a', newline='\n') as csvFile:
                 writer = csv.writer(csvFile)
                 writer.writerow("w")
                 # print("「{}」を書き込みました".format(hands))
             csvFile.close()
         else:
-            with open('C:/Users/rykts/Documents/Codes/Projects/janken/result.csv', 'a', newline='\n') as csvFile:
+            with open('C:/Users/rykts/Documents/JANKEN/Bot/Beta/result.csv', 'a', newline='\n') as csvFile:
                 writer = csv.writer(csvFile)
                 writer.writerow("l")
                 # print("「{}」を書き込みました".format(hands))
@@ -50,13 +50,13 @@ def randomJanken():
         csvFile.close()
         if your_hand_now == random.randint(1, 3):
 
-            with open('C:/Users/rykts/Documents/Codes/Projects/janken/result.csv', 'a', newline='\n') as csvFile:
+            with open('C:/Users/rykts/Documents/JANKEN/Bot/Beta/result.csv', 'a', newline='\n') as csvFile:
                 writer = csv.writer(csvFile)
                 writer.writerow("w")
                 # print("「{}」を書き込みました".format(hands))
             csvFile.close()
         else:
-            with open('C:/Users/rykts/Documents/Codes/Projects/janken/result.csv', 'a', newline='\n') as csvFile:
+            with open('C:/Users/rykts/Documents/JANKEN/Bot/Beta/result.csv', 'a', newline='\n') as csvFile:
                 writer = csv.writer(csvFile)
                 writer.writerow("l")
                 # print("「{}」を書き込みました".format(hands))
@@ -89,13 +89,13 @@ for i in range(87):
 
     if your_hand_now == pred:
 
-        with open('C:/Users/rykts/Documents/Codes/Projects/janken/result.csv', 'a', newline='\n') as csvFile:
+        with open('C:/Users/rykts/Documents/JANKEN/Bot/Beta/result.csv', 'a', newline='\n') as csvFile:
             writer = csv.writer(csvFile)
             writer.writerow("w")
             # print("「{}」を書き込みました".format(hands))
         csvFile.close()
     else:
-        with open('C:/Users/rykts/Documents/Codes/Projects/janken/result.csv', 'a', newline='\n') as csvFile:
+        with open('C:/Users/rykts/Documents/JANKEN/Bot/Beta/result.csv', 'a', newline='\n') as csvFile:
             writer = csv.writer(csvFile)
             writer.writerow("l")
             # print("「{}」を書き込みました".format(hands))
