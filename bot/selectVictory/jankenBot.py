@@ -1,16 +1,11 @@
 import pandas as pd
-from openpyxl import Workbook
-import random
 import csv
-import sklearn
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score
+from sklearn.tree import DecisionTreeClassifier
 
 pastHands = [0]*4
 
-handsCsvLink = 'C:/Users/rykts/Documents/JANKEN/bot/Beta3/csvFiles/hands.csv'
-resultCsvLink = 'C:/Users/rykts/Documents/JANKEN/bot/Beta3/csvFiles/result.csv'
+handsCsvLink = 'C:/Users/rykts/Documents/JANKEN/bot/selectVictory/csv/hands.csv'
+resultCsvLink = 'C:/Users/rykts/Documents/JANKEN/bot/selectVictory/csv/result.csv'
 
 
 def inputHand(Question):
@@ -47,7 +42,7 @@ def doJanken(yourHand):
     X = df[['b3h', 'b2h', 'b1h']]
     Y = df['hand']
     # モデル作成
-    clf = RandomForestClassifier(random_state=0)
+    clf = DecisionTreeClassifier(random_state=0)
     clf.fit(X, Y)
     # 予測
     pred = clf.predict(pd.DataFrame(
