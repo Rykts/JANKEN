@@ -47,7 +47,7 @@ def doJanken(yourHand):
     X = df[['b3h', 'b2h', 'b1h']]
     Y = df['hand']
     # モデル作成
-    clf = RandomForestClassifier(random_state=77)
+    clf = RandomForestClassifier(random_state=0)
     clf.fit(X, Y)
     # 予測
     pred = clf.predict(pd.DataFrame(
